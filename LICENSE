@@ -1,52 +1,6 @@
-Validar Cuentas Bancarias con PHP (Venezuela)
-=============================================
-
-Esta es una libería PHP para validar los números de cuentas bancarias de Venezuela.
-
------------
-
-## Instalación
-
-### Composer
-
-#### Instalar Composer
-
-```bash
-curl -sS https://getcomposer.org/installer | php
-```
-
-#### Agregar Validator via Composer
-
-Agrega a tu archivo composer.json:
-
-```javascript
-{
-    ...
-    "require": {
-        ...
-        "pablorsk/bank-account-validator-venezuela": "dev-master"
-    }
-    ...
-}
-```
-
-## Ejemplo
-
-```php
-	if (BankAccountVe::isValid('111111111'))
-		echo 'CBU correcto';
-	else
-		echo 'CBU incorrecto';
-
-	// print "MERCANTIL"
-	echo BankAccountVe::getBankName('01050194697100000000');
-```
-
-## License
-
 The MIT License (MIT)
 
-Copyright (c) 2014 Pablo Gabriel Reyes
+Copyright (c) 2014 pablorsk
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -65,3 +19,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
