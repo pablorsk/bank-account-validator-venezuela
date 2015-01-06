@@ -12,6 +12,7 @@ class BankAccountVeTest extends PHPUnit_Framework_TestCase
 {
     public function	testIsValid()
 	{
+        $this->assertEquals(false, BankAccountVe::isValid(''));
         $this->assertEquals(false, BankAccountVe::isValid('111111111'));
         $this->assertEquals(false, BankAccountVe::isValid('AAAAA0000'));
         $this->assertEquals(false, BankAccountVe::isValid('01340946340001361695'));

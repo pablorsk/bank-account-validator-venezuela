@@ -48,17 +48,11 @@ class BankAccountVe
 		else
 			$pesos = array(3, 2, 7, 6, 5, 4, 3, 2, 5, 4, 3, 2);
 			
-		$contador = 0;
 		$s = 0;
-		$fin = false;
-		
-		while ($fin == false)
+		for ($i = 0; $i < strlen($numero); $i++)
 		{
-			$d = $numero[$contador];
-			$s += $d * $pesos[$contador];
-			$contador++;
-			if ($contador == strlen($numero))
-				$fin = true;
+			$d = $numero[$i];
+			$s += $d * $pesos[$i];
 		}
 		$resultado = (int)(11-($s % 11));
 		if ($resultado == 10)
