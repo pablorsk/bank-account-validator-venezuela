@@ -1,10 +1,10 @@
 <?php
 /**
- * Permite validar los CBU (Clave Bancaria Uniforme), Argentina.
+ * Permite validar los Numeros de cuentas bancarias, Venezuela.
  *
  * @author Pablo Gabriel Reyes
  * @link https://pabloreyes.com.ar/ Blog
- * @link https://github.com/pablorsk/cbu-validator-php CBU validator on GitHub
+ * @link https://github.com/pablorsk/bank-account-validator-venezuela
  * @version 1.0.0
  * 
  * Basado http://omarrodrigueztech.blogspot.com.ar/2010/05/validaciones-modulo-11-permite-validar.html
@@ -34,14 +34,14 @@ class BankAccountVe
 		return false;
 	}
 	
-	private function getDigitoVerificador($entidad, $sucursal, $cuenta)
+	private static function getDigitoVerificador($entidad, $sucursal, $cuenta)
 	{
 		$d = self::dc($entidad.$sucursal, false);
 		$d .= self::dc($sucursal.$cuenta, true);
 		return $d;
 	}
 	
-	private function dc($numero, $escuenta)
+	private static function dc($numero, $escuenta)
 	{
 		if ($escuenta)
 			$pesos = array(3, 2, 7, 6, 5, 4, 3, 2, 7, 6, 5, 4, 3, 2);
