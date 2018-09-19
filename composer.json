@@ -7,19 +7,23 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Bank Account Validator Velezuela"
-        },
-        {
             "name": "Pablo Reyes",
-            "email": "pablo@srtk.com"
+            "email": "pablo@reyesoft.com",
+            "homepage": "https://pabloreyes.com.ar/"
         }
     ],
+    "minimum-stability": "stable",
     "require-dev": {
-        "phpunit/phpunit": "4.3.*"
+        "phpunit/phpunit": "7.2.6"
     },
     "autoload": {
         "psr-4": {
             "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
         }
     }
 }

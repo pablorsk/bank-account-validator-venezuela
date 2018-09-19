@@ -22,6 +22,10 @@ class BankAccountVe
 	 */
 	public static function isValid($account_number)
 	{
+	    if (!preg_match('/^[0-9]{20}$/', $account_number)) {
+	        return false;
+        }
+
 		$entidad = substr($account_number, 0, 4);
 		$sucursal = substr($account_number, 4, 4);
 		$dc = substr($account_number, 8, 2);

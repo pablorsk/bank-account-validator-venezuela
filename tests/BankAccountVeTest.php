@@ -8,7 +8,7 @@
  * @link https://github.com/pablorsk/cbu-validator-php CBU validator on GitHub
  * @version 1.0.0
  */
-class BankAccountVeTest extends PHPUnit_Framework_TestCase
+class BankAccountVeTest extends \PHPUnit\Framework\TestCase
 {
     public function	testIsValid()
 	{
@@ -17,6 +17,8 @@ class BankAccountVeTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(false, BankAccountVe::isValid('AAAAA0000'));
         $this->assertEquals(false, BankAccountVe::isValid('01340946340001361695'));
         $this->assertEquals(true,  BankAccountVe::isValid('01050194651194079423'));
+        $this->assertFalse(BankAccountVe::isValid('01050194651194-079423'));
+        $this->assertFalse(BankAccountVe::isValid('01050194651194079423 More text?'));
 	}
 	
     public function	testBankName()

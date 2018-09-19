@@ -1,7 +1,0 @@
-<phpunit bootstrap="./Bootstrap.php" colors="true">
-  <testsuites>
-    <testsuite name="Bank Account Ve Test Suite">
-      <directory>./</directory>
-    </testsuite>
-  </testsuites>
-</phpunit>
