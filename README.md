@@ -1,6 +1,11 @@
 Validar Cuentas Bancarias con PHP (Venezuela)
 =============================================
 
+
+⚠️ **PLEASE USE https://github.com/reyesoft/php-bank-accounts** ⚠️
+
+
+
 Esta es una libería PHP para validar los números de cuentas bancarias de Venezuela.
 
 -----------
